@@ -61,7 +61,7 @@ const cache: CacheMap = new Map()
 
 export function useScraper({
   url,
-  proxyUrl = 'https://cors-anywhere.herokuapp.com',
+  proxyUrl = 'https://cors-proxy.htmldriven.com',
   defaultMedias = [],
   defaultValue,
   noCache,
