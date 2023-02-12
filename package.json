@@ -1,9 +1,13 @@
 {
   "name": "@furkanakcay/react-tiny-link",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/furkanakcay"
+    "registry": "https://npm.pkg.github.com/"
   },
-  "version": "3.6.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/furkanakcay/react-tiny-link.git"
+  },
+  "version": "3.6.2",
   "main": "lib/index.js",
   "license": "MIT",
   "keywords": [
