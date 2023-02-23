@@ -61,7 +61,7 @@ const cache: CacheMap = new Map()
 
 export function useScraper({
   url,
-  proxyUrl = 'https://cors-anywhere.herokuapp.com',
+  proxyUrl = 'https://cors-anywhere.herokuapp.com/',
   defaultMedias = [],
   defaultValue,
   noCache,
@@ -91,13 +91,13 @@ export function useScraper({
 
       try {
         // actual request to preview the link
-        let urlToCall = proxyUrl ? `${proxyUrl}/${url}` : url
+        let urlToCall = proxyUrl ? `${proxyUrl}${url}` : url
         if (isInstagramUrl(url)) {
           const modifiedInstaUrl = `${url}?__a=1&max_id=endcursor`
           urlToCall = modifiedInstaUrl
         } else if (isTwitterUrl(url)) {
           const modifiedInstaUrl = `https://publish.twitter.com/oembed?url=${url}`
-          urlToCall = proxyUrl ? `${proxyUrl}/${modifiedInstaUrl}` : modifiedInstaUrl
+          urlToCall = proxyUrl ? `${proxyUrl}${modifiedInstaUrl}` : modifiedInstaUrl
         }
 
         let data
